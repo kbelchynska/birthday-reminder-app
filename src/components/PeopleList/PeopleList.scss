@@ -1,0 +1,47 @@
+.people-list {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 100%;
+    margin: 0 auto;
+    justify-content: center;
+    padding: 3rem 0 6rem 0;
+    width: 90%;
+  
+    // people-list__btn
+    &__btn {
+      align-self: flex-start;
+      display: none;
+      font-size: 1.7rem;
+      justify-self: end;
+      grid-column: 3;
+      width: max-content;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .people-list {
+      // people-list__btn
+      &__btn {
+        display: initial;
+      }
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .people-list {
+      grid-template-columns: repeat(auto-fill, 320px);
+      // people-list__btn
+      &__btn {
+        grid-column: 2;
+      }
+    }
+  }
+  
+  @media (min-width: 1025px) {
+    .people-list {
+      padding-left: 3rem;
+      padding-right: 3rem;
+      grid-template-columns: repeat(auto-fill, 300px);
+      width: 100%;
+    }
+  }

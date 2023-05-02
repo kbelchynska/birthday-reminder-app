@@ -1,0 +1,79 @@
+@import '../../styles/variables';
+.app-head {
+  align-items: center;
+  background: $ui-color;
+  display: flex;
+  height: 60px;
+  justify-content: space-between;
+  padding: 0.6rem 0.8rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  &__logo {
+    color: white;
+    font-size: 1.5rem;
+    user-select: none;
+  }
+}
+
+.app-head-nav {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  height: 100%;
+  width: 100%;
+
+  // app-head-nav__search-btn
+  &__search-btn {
+    color: $third-color;
+    font-size: 1.5rem;
+    margin-right: 0;
+  }
+
+  // app-head-nav__fav-btn
+  &__fav-btn {
+    cursor: pointer;
+    display: none;
+    font-size: 1.3rem;
+    color: $sec-color;
+    transition: color 100ms ease;
+  }
+
+  &__search-btn {
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 768px) {
+  .app-head {
+    padding: 0.6rem 1.5rem;
+  }
+  .app-head-nav {
+    // app-head-nav__search-btn
+    &__search-btn {
+      color: $third-color;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  .app-head-nav {
+    // app-head-nav__fav-btn
+    &__fav-btn {
+      display: initial;
+    }
+
+    // app-head-nav__search-btn
+    &__search-btn {
+      margin-right: 1rem;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .app-head {
+    padding: 0.6rem 3%;
+  }
+}

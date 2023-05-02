@@ -1,0 +1,18 @@
+@import '../../styles/variables';
+.sorting-selectbox {
+  appearance: none;
+  border-radius: 10px;
+  border: 2px solid $sec-color;
+  cursor: pointer;
+  color: black;
+  display: none;
+  font-size: 1.1rem;
+  margin-right: 1rem;
+  padding: 0.3rem 0.7rem;
+}
+
+@media (min-width: 769px) {
+  .sorting-selectbox {
+    display: initial;
+  }
+}

@@ -1,0 +1,48 @@
+@import '../../styles/variables';
+.mobile-nav {
+  align-items: center;
+  background: $ui-color;
+  bottom: 0;
+  display: flex;
+  height: $mobile-nav-height;
+  justify-content: space-between;
+  left: 0;
+  padding: 0 1rem;
+  position: fixed;
+  width: 100vw;
+  z-index: 1000;
+
+  // mobile-nav__btn
+  &__btn {
+    align-items: center;
+    background: $third-color;
+    border-radius: 50%;
+    bottom: 30px;
+    cursor: pointer;
+    display: flex;
+    font-size: 2.3rem;
+    justify-content: center;
+    height: $person-img-size;
+    position: relative;
+    transition: background 100ms ease;
+    width: $person-img-size;
+  }
+
+  &__btn:hover {
+    background: lighten($third-color, 1.5%);
+  }
+
+  // mobile-nav__btn--side
+  &__btn--side {
+    font-size: 1.6rem;
+    position: static;
+    height: 60px;
+    width: 60px;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-nav {
+    display: none;
+  }
+}

@@ -1,0 +1,14 @@
+.add-person-ui-controls {
+    // add-person-ui-controls__icon
+    &__icon {
+      font-size: 2rem;
+    }
+    // add-person-ui-controls__add-btn
+    &__add-btn {
+      cursor: pointer;
+      transition: color 100ms ease;
+    }
+    &__add-btn:hover {
+      color:#000000b2;;
+    }
+  }

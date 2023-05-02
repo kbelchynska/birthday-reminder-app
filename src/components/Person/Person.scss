@@ -1,0 +1,95 @@
+@import '../../styles/variables';
+.person {
+  align-items: center;
+  background: $sec-color;
+  border-radius: 20px;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  height: 86px;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  position: relative;
+  transition: background 200ms ease;
+
+  // person__dropdown-btn
+  &__dropdown-btn {
+    color: rgb(77, 76, 76);
+    cursor: pointer;
+    display: none;
+    font-size: 1.5rem;
+    position: absolute;
+    right: 10px;
+    transition: color 200ms ease;
+    top: 0;
+  }
+  &__dropdown-btn:hover {
+    color: rgb(46, 46, 46);
+  }
+  &__dropdown-btn:focus {
+    color: rgb(238, 238, 238);
+    outline: none;
+  }
+}
+
+.person:hover {
+  background: $sec-color-hover;
+}
+
+.person--highlighted {
+  z-index: 1000000;
+}
+
+.person-info {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  // person-info__name
+  &__name {
+    font-size: 1.2rem;
+    margin-bottom: 0.2rem;
+    text-align: center;
+  }
+  // person-info__birthday
+  &__birthday {
+    color: #2e2e31;
+    font-size: 1.6rem;
+    text-align: center;
+  }
+}
+
+.person-age-container {
+  text-align: center;
+
+  // person-age-container__age
+  &__age {
+    color: black;
+    font-size: 1.6rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .person {
+    cursor: initial;
+    // person__dropdown-btn
+    &__dropdown-btn {
+      display: flex;
+      justify-content: flex-end;
+    }
+    &:hover {
+      background: $sec-color;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  .person-info {
+    
+    // person-info__name
+    &__name {
+      overflow-wrap: break-word;
+      width: 130px;
+    }
+  }
+}

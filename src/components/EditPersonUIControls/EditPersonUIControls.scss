@@ -1,0 +1,17 @@
+.edit-person-ui-controls {
+    // edit-person-ui-controls__accept-btn
+  
+    &__accept-btn {
+      cursor: pointer;
+      color: #000;
+      transition: color 100ms ease;
+    }
+    &__accept-btn:hover {
+      color: lighten(#000, 15%);
+    }
+  
+    // edit-person-ui-controls__icon
+    &__icon {
+      font-size: 2rem;
+    }
+  }
